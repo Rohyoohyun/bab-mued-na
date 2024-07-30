@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check for other food-related diseases</title>
+    <style>
+        body{
+            margin: 0 auto;
+            padding: 30px;
+            background-color: #1E1E1E;
+        }
+
+        #header{
+            color: #fff;
+            font-size: 25px;
+        }
+
+        .orange{
+            color: #DE5D00;
+        }
+
+        button{
+            color: #fff;
+            width: 380px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 20px;
+            font-family: inherit;
+            border: none;
+            background-color: #DE5D00;
+            position: absolute;
+            top: 90%;
+            left: 50px;
+        }
+
+        button:hover{
+            background-color: #ad4800;
+        }
+
+        div{        
+            margin-top: 30px;       
+            text-align: center;
+        }
+    </style>
+    <div><img src="/Users/yoohyun/Desktop/project/밥뭇나/logo.png" width="111" height="72"></div>
+</head>
+<body>
+    <p id="header">어떤 <span class="orange">기타 질환</span>이 있으신가요?</br></p>
+    <textarea name="tel" style= "padding: 20px; font-size: 15px; background-color: #444444; width: 330px; height: 300px; border-radius: 10px; color: #fff;" placeholder="음식에 관련된 기타 질환을 입력해주세요"></textarea>
+    <button onClick="location.href='refrigerator.html'" id="button">다음</button>
+</body>
+</html>
