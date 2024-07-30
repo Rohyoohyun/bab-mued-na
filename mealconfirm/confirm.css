@@ -25,32 +25,26 @@ body{
 }
 .title{
     font-size: 25px;
+}
+.date{
     font-weight: 800;
 }
-.subtitle{
-    font-size: 25px;
-}
 .contents{
-    margin-top: 15px;
-    overflow-y: scroll;
+    margin-top: 45px;
     height: calc(100% - 150px);
+    overflow-y: scroll;
 }
-.menu{
+.uploadBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 30px;
     background-color: #444;
     border-radius: 10px;
     height: 267px;
 }
-.contents_title{
-    font-weight: 800;
-    color: #DE5D00;
+.uploadBox_items{
     text-align: center;
-    font-size: 20px;
-    margin-bottom: 15px;
-}
-.menuList{
-    list-style: none;
-    line-height: 150%;
 }
 .nextpagebtn{
     font-size: 20px;
