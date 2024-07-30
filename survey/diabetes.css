@@ -1,3 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    border:none;
+} 
+
 body{
     margin: 0 auto;
     padding: 30px;
@@ -8,25 +15,30 @@ body{
 #header{
     color: #fff;
     font-size: 25px;
+    position: relative;
+    left: -23%;
 }
 
 .orange{
     color: #DE5D00;
 }
 
+
 .nextpageBtn{
     color: #fff;
-    width: 100%;
-    padding: 20px 0px;
+    width: 90%;
+    height: 3em;
     border-radius: 10px;
     font-size: 20px;
     font-family: inherit;
     border: none;
     background-color: #DE5D00;
-    margin-top: 100px;
+    position: absolute;
+    top: 85%;
+    left: 5%;
 }
 
-#button:hover{
+.nextpageBtn:hover{
     background-color: #ad4800;
 }
 
