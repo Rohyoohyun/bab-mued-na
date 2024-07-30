@@ -5,26 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Check</title>
     <link rel="stylesheet" href="diabetes.css"/>
-    <div><img src="/Users/yoohyun/Desktop/project/밥뭇나/logo.png" width="111" height="72"></div>
+    <div><img src="/Users/yoohyun/Desktop/project/밥뭇나/밥뭇나/logo.png" width="111" height="72"></div>
 </head>
 <body>
-    <p id="header"><span class="orange">당뇨</span>가 있으신가요?</br></p>
+    <div id="container">
+        <p id="header"><span class="orange">당뇨</span>가 있으신가요?</br></p>
+    
+        <div class="select">
+            <input type="radio" id="select1" name="shop"><label for="select1">1형 당뇨</label>
+        </div>
 
-    <div class="select">
-        <input type="radio" id="select1" name="shop"><label for="select1">1형 당뇨</label>
-   </div>
-   <div class="select">
-        <input type="radio" id="select2" name="shop"><label for="select2">2형 당뇨</label>
+        <div class="select">
+            <input type="radio" id="select2" name="shop"><label for="select2">2형 당뇨</label>
+        </div>
+
+        <div class="select">
+            <input type="radio" id="select3" name="shop"><label for="select3">임신 당뇨</label>
+        </div>
+
+        <div class="select">
+            <input type="radio" id="select4" name="shop"><label for="select4">기타 당뇨</label>
+        </div>
+
+        <div class="select">
+            <input type="radio" id="select5" name="shop"><label for="select5">당뇨 없음</label>
+        </div>
+        <button onClick="location.href='else.html'" class="nextpageBtn">다음</button>
     </div>
-    <div class="select">
-        <input type="radio" id="select3" name="shop"><label for="select3">임신 당뇨</label>
-   </div>
-   <div class="select">
-        <input type="radio" id="select4" name="shop"><label for="select4">기타 당뇨</label>
-    </div>
-    <div class="select">
-        <input type="radio" id="select5" name="shop"><label for="select5">당뇨 없음</label>
-   </div>
-   <button onClick="location.href='else.html'" id="button">다음</button>
 </body>
 </html>
