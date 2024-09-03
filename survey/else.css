@@ -1,14 +1,17 @@
+
 *{
     margin:0;
     padding:0;
     box-sizing: border-box;
     border:none;
-    font-family: inherit;
 }
-
 body{
     margin: 0 auto;
     background-color: #1E1E1E;
+}
+
+div{
+    margin-bottom: 30px;
 }
 
 #header{text-align: center}
@@ -24,7 +27,7 @@ body{
     font-size: 25px;
 }
 
-div{        
+div{
     margin-top: 30px;
 }
 
@@ -63,13 +66,13 @@ div{
 .plusBtn:hover{
     background-color: #ad4800;
 }
-#allergyList{
+#elseList{
     display: flex;
     flex-wrap: wrap;
     max-height: calc(100vh - 100px - 300px);
 }
 
-#allergyList li{
+#elseList li{
     list-style: none;
     padding: 13px 18px;
     background-color: #444;
@@ -86,6 +89,7 @@ div{
 .delBtn:hover{
     cursor: pointer;
 }
+
 
 #footer{
     width: 90%;

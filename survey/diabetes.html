@@ -5,34 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diabetes Check</title>
     <link rel="stylesheet" href="diabetes.css"/>
-    <div><img src="../logo.png" width="111" height="72"></div>
 </head>
 <body>
+    <div id = header><img src="../logo.png" width="111" height="72"></div>
     <!-- 만약 체크하지 않았을 때의 경고창도 띄우게 함 -->
-    <br><br>
-    <div id="container">
-        <p id="header">어떤 <span class="orange">당뇨</span>가 있으신가요?</br></p>
-    
-        <div class="select">
-            <input type="radio" id="select1" name="shop"><label for="select1">1형 당뇨</label>
-        </div>
+    <form action="else.html" method="POST">
+        <div id="container">
+            <div class="title">어떤 <span style="color: #DE5D00">당뇨</span>가 있으신가요?</div>
 
-        <div class="select">
-            <input type="radio" id="select2" name="shop"><label for="select2">2형 당뇨</label>
-        </div>
+            <div class="select">
+                <input type="radio" id="select1" name="shop" value="1" checked><label for="select1">1형 당뇨</label>
+            </div>
 
-        <div class="select">
-            <input type="radio" id="select3" name="shop"><label for="select3">임신 당뇨</label>
-        </div>
+            <div class="select">
+                <input type="radio" id="select2" name="shop" value="2"><label for="select2">2형 당뇨</label>
+            </div>
 
-        <div class="select">
-            <input type="radio" id="select4" name="shop"><label for="select4">기타 당뇨</label>
-        </div>
+            <div class="select">
+                <input type="radio" id="select3" name="shop" value="3"><label for="select3">임신 당뇨</label>
+            </div>
 
-        <div class="select">
-            <input type="radio" id="select5" name="shop"><label for="select5">당뇨 없음</label>
+            <div class="select">
+                <input type="radio" id="select4" name="shop" value="4"><label for="select4">기타 당뇨</label>
+            </div>
+
+            <div class="select">
+                <input type="radio" id="select5" name="shop" value="0"><label for="select5">당뇨 없음</label>
+            </div>
         </div>
-        <button onClick="location.href='else.html'" class="nextpageBtn">다음</button>
-    </div>
+        <div id="footer"><button type="submit" class="nextPageBtn">다음</button></div>
+    </form>
 </body>
 </html>

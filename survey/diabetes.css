@@ -7,45 +7,23 @@
 
 body{
     margin: 0 auto;
-    padding: 30px;
     background-color: #1E1E1E;
-    text-align: center;
 }
 
-#header{
-    color: #fff;
-    font-size: 25px;
-    position: relative;
-    left: -23%;
+div{
+    margin-top: 30px;
 }
 
-.orange{
-    color: #DE5D00;
-}
-
-
-.nextpageBtn{
-    color: #fff;
-    width: 90%;
-    height: 3em;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: inherit;
-    border: none;
-    background-color: #DE5D00;
-    position: absolute;
-    top: 85%;
-    left: 5%;
-}
-
-.nextpageBtn:hover{
-    background-color: #ad4800;
-}
+#header{text-align: center}
 
 #container{
-    text-align: center;
-    margin-top: 30px;    
-    width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title{
+    color: #fff;
+    font-size: 25px;
 }
 
 /* radio */
@@ -75,4 +53,27 @@ body{
 .select input[type=radio]:checked+label{
     background-color: #DE5D00;
     color: #fff;
+}
+
+
+#footer{
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}
+
+.nextPageBtn{
+    color: #fff;
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: #DE5D00;
+}
+
+.nextPageBtn:hover{
+    background-color: #ad4800;
 }
