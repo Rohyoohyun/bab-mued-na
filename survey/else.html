@@ -4,91 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Check for other food-related diseases</title>
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-            border:none;
-        } 
-        body{
-            margin: 0 auto;
-            padding: 30px;
-            background-color: #1E1E1E;
-        }
-
-        #header{
-            color: #fff;
-            font-size: 25px;
-        }
-
-        .orange{
-            color: #DE5D00;
-        }
-
-        .nextpageBtn{
-            color: #fff;
-            width: 90%;
-            height: 3em;
-            border-radius: 10px;
-            font-size: 20px;
-            font-family: inherit;
-            border: none;
-            background-color: #DE5D00;
-            position: absolute;
-            top: 85%;
-            left: 5%;
-        }
-
-        .nextpageBtn:hover{
-            background-color: #ad4800;
-        }
-
-        div{        
-            margin-top: 30px;       
-            text-align: center;
-        }
-
-        .container{
-            border-radius: 10px;
-            background-color: #444444;
-            width: 100%;
-            height: 5em;
-            padding: 20px 0px;
-        }
-
-        input[type = text]{
-            border: none;
-            background: transparent;
-            color: #fff;
-            width: 65%;
-            height: 100%;
-            background-color: none;
-        }
-
-        .PlusBtn{
-            color: #fff;
-            border: none;
-            border-radius: 10px;
-            background-color: #DE5D00;
-            width: 20%;
-            height: 100%;
-            position: relative;
-        }
-
-        .PlusBtn:hover{
-            background-color: #ad4800;
-        }
-    </style>
-    <div><img src="../logo.png" width="111" height="72"></div>
+    <link rel="stylesheet" href="else.css">
 </head>
 <body>
-    <br><br>
-    <p id="header">어떤 <span class="orange">기타 질환</span>이 있으신가요?</br></p>
-    <div class="container">
-        <input type="text" placeholder="음식관련 질환을 입력해주세요">
-        <button type="button" class="PlusBtn" onclick="">추가</button>
-      </div>
-    <button onClick="location.href='../refrigerator/vege.html'" class="nextpageBtn">다음</button>
+    <div id="header"><img src="../logo.png" width="111" height="72"></div>
+    <form action="../refrigerator/vege.html" method="post">
+        <div id = container>
+            <p class="title">어떤 <span style="color: #DE5D00">기타 질환</span>이 있으신가요?</p>
+            <div class="inputBox">
+                <input type="text" id="elseInput" placeholder="음식관련 질환을 입력해주세요"/>
+                <button type="button" class="plusBtn" id="plusBtn" onclick="">추가</button>
+            </div>
+            <ul id = elseList>
+                <!--js작성-->
+            </ul>
+        </div>
+        <div id="footer"><button type="submit" class="nextPageBtn">다음</button></div>
+    </form>
+    <script>
+        const elseArray = ['수면장애', '소화불량'];
+        const plusBtn = document.getElementById('plusBtn');
+        const delBtn = document.getElementsByClassName('delBtn');
+        const elseList = document.getElementById('elseList')
+        const elseInput = document.getElementById('elseInput')
+
+        plusBtn.addEventListener("click", addElse);
+        elseList.addEventListener("click", delElse);
+
+        renderElseList()
+
+        function addElse(){
+            let elseValue = elseInput.value.trim();
+
+            if(elseValue){
+                elseArray.unshift(elseValue);
+                renderElseList();
+                elseInput.value = '';
+            }
+        }
+
+        function delElse(event) {
+            if (event.target.classList.contains('delBtn')) {
+                let elseToRemove = event.target.parentElement.textContent.slice(0, -1); // 'X' 제거
+                elseArray.splice(elseArray.indexOf(elseToRemove), 1); // 해당 항목 제거
+                renderElseList();
+            }
+        }
+
+        function renderElseList(){
+            const elseList = document.getElementById('elseList');
+            elseList.innerHTML = '';
+
+            elseArray.forEach(function (elseItem){
+                let li = document.createElement('li');
+                li.innerHTML = elseItem + "<button type='button' class='delBtn'>X</button>";
+                elseList.appendChild(li);
+            })
+            elseInput.focus();
+        }
+    </script>
 </body>
 </html>
