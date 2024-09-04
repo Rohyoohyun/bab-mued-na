@@ -5,37 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Adjusting your meal schedule</title>
     <link rel="stylesheet" href="datePlan.css"/>
-    <div><img src="../logo.png" width="111" height="72"></div>
 </head>
 <body>
-    <br><br>
-    <p id="header">어떤 날의<span class="orange">식단</span>을<br>작성하지 않으실건가요?</br></p>
-
-    <br><br>
-    <fieldset>
-        <h2 style="color: #fff;">월요일</h2>
-        <div class="container">
-            <label for="agree" class="chk_box" style="text-align:center; color: #fff;">
-                <input type="checkbox" id="agree"/>
-                <span class="on"></span>
-                조식
-            </label>
-        </div>
-        <div class="container">
-            <label for="agree" class="chk_box" style="color: #fff;">
-                <input type="checkbox" id="agree"/>
-                <span class="on"></span>
-                중식
-            </label>
-        </div>
-        <div class="container">
-            <label for="agree" class="chk_box" style="color: #fff;">
-                <input type="checkbox" id="agree"/>
-                <span class="on"></span>
-                석식
-            </label>
-        </div>
-    </fieldset>
-    <button onClick="location.href='diet.html'" class="nextpageBtn">다음</button>
+    <div class="contents">
+        <div id="header"><img src="../logo.png" width="111" height="72"></div>
+        <form action="diet.html" method="post">
+            <div id="container">
+                <div class="title">어떤 날의 <span style="color: #DE5D00">식단</span>을<br>작성하실건가요?</div>
+                <fieldset id = Monday>
+                    <div class="week">월요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="MonBreakfast" class="chk_box" checked/>
+                        <label for="MonBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="MonLunch" class="chk_box" checked/>
+                        <label for="MonLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="MonDinner" class="chk_box" checked/>
+                        <label for="MonDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Tuesday>
+                    <div class="week">화요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="TueBreakfast" class="chk_box" checked/>
+                        <label for="TueBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="TueLunch" class="chk_box" checked/>
+                        <label for="TueLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="TueDinner" class="chk_box" checked/>
+                        <label for="TueDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Wednesday>
+                    <div class="week">수요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="WedBreakfast" class="chk_box" checked/>
+                        <label for="WedBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="WedLunch" class="chk_box" checked/>
+                        <label for="WedLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="WedDinner" class="chk_box" checked/>
+                        <label for="WedDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Thursday>
+                    <div class="week">목요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="ThuBreakfast" class="chk_box" checked/>
+                        <label for="ThuBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="ThuLunch" class="chk_box" checked/>
+                        <label for="ThuLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="ThuDinner" class="chk_box" checked/>
+                        <label for="ThuDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Friday>
+                    <div class="week">금요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="FriBreakfast" class="chk_box" checked/>
+                        <label for="FriBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="FriLunch" class="chk_box" checked/>
+                        <label for="FriLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="FriDinner" class="chk_box" checked/>
+                        <label for="FriDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Saturday>
+                    <div class="week">토요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="SatBreakfast" class="chk_box" checked/>
+                        <label for="SatBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="SatLunch" class="chk_box" checked/>
+                        <label for="SatLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="SatDinner" class="chk_box" checked/>
+                        <label for="SatDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+                <fieldset id = Sunday>
+                    <div class="week">일요일</div>
+                    <div class="select">
+                        <span class="time">조식</span>
+                        <input type="checkbox" id="SunBreakfast" class="chk_box" checked/>
+                        <label for="SunBreakfast" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">중식</span>
+                        <input type="checkbox" id="SunLunch" class="chk_box" checked/>
+                        <label for="SunLunch" class="chk_label"><span>v</span></label>
+                    </div>
+                    <div class="select">
+                        <span class="time">석식</span>
+                        <input type="checkbox" id="SunDinner" class="chk_box" checked/>
+                        <label for="SunDinner" class="chk_label"><span>v</span></label>
+                    </div>
+                </fieldset>
+            </div>
+            <div id="footer"><button type="submit" class="nextPageBtn">다음</button></div>
+        </form>
+    </div>
 </body>
 </html>

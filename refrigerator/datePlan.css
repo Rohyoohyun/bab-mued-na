@@ -3,124 +3,105 @@
     padding:0;
     box-sizing: border-box;
     border:none;
-} 
+}
 
 body{
     margin: 0 auto;
-    padding: 30px;
     background-color: #1E1E1E;
 }
 
-#header{
+div{
+    margin-top: 30px;
+}
+
+.contents{
+    margin-top: 0;
+    height: calc(100vh - 150px);
+    overflow-y: scroll;
+}
+
+#header{text-align: center}
+
+#container{
+    width: 90%;
+    margin: 0 auto;
+}
+
+.title{
     color: #fff;
     font-size: 25px;
 }
 
-.orange{
-    color: #DE5D00;
-}
-
-.nextpageBtn{
+.week{
     color: #fff;
-    width: 90%;
-    height: 3em;
-    border-radius: 10px;
-    font-size: 20px;
-    font-family: inherit;
-    border: none;
-    background-color: #DE5D00;
-    position: absolute;
-    top: 85%;
+    font-size: 25px;
+    font-weight: bold;
+}
+.time{
+    color: #fff;
 }
 
-.nextpageBtn:hover{
-    background-color: #ad4800;
-}
-
-div{        
-    margin-top: 30px;       
-    text-align: center;
-}
-
-.container{
+.select{
     border-radius: 10px;
     background-color: #444444;
     width: 100%;
-    height: 4em;
-    padding: 20px 0px;
+    margin: 16px 0px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-input[type = text]{
-    border: none;
-    background: transparent;
+.chk_box{
+    display: none;
+}
+
+.chk_label{
+    cursor: pointer;
+    width: 42px;
+    height: 33px;
+    border: 4px solid #DE5D00;
+    border-radius: 10px;
+    line-height: 24px;
+    text-align: center;
+    font-weight:bold;
+    font-size:1em;
+}
+.chk_label{
+    background:none;
+}
+
+.chk_box + .chk_label>span{
+    display: none;
+}
+
+.chk_box:checked + .chk_label{
+    background-color: #DE5D00;
+}
+
+.chk_box:checked + .chk_label>span{
+    display: block;
+}
+
+
+#footer{
+    width: 90%;
+    margin: 0 auto;
+    position: fixed;
+    bottom: 5%;
+    left: 5%;
+}
+
+.nextPageBtn{
     color: #fff;
-    width: 65%;
-    height: 100%;
-    background-color: none;
-}
-
-.checkBtn{
+    width: 100%;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 20px;
     border: none;
-    color: #fff;
-    background-color: #444444;
-    width: 20%;
-    height: 100%;
-    position: relative;
-    left: -30%;
+    background-color: #DE5D00;
 }
 
-.chk_box {
-    display: block; 
-    position: relative; 
-    padding-left: 0%; 
-    margin-bottom: 10px; 
-    cursor: pointer; 
-    font-size: 14px; 
-    -webkit-user-select: none; 
-    -moz-user-select: none; 
-    -ms-user-select: none; 
-    user-select: none; 
-}
-
-/* 기본 체크박스 숨기기 */
-.chk_box input[type="checkbox"]{
-    display: none; 
-}
-
-/* 선택되지 않은 체크박스 스타일 꾸미기 */
-.on { 
-    width: 20px; 
-    height: 20px; 
-    background: #ddd; 
-    position: absolute; 
-    top: 0; 
-    left: 0; 
-}
-
-/* 선택된 체크박스 스타일 꾸미기 */
-.chk_box input[type="checkbox"]:checked + .on {
-    background: #DE5D00; 
-}
-
-.on:after { 
-    content: ""; 
-    position: absolute; 
-    display: none; 
-}
-
-.chk_box input[type="checkbox"]:checked + .on:after {
-    display: block; 
-}
-
-.on:after {
-    width: 6px; 
-    height: 10px; 
-    border: solid #fff; 
-    border-width: 0 2px 2px 0; 
-    -webkit-transform: rotate(45deg); 
-    -ms-transform: rotate(45deg); 
-    transform: rotate(45deg); 
-    position: absolute; 
-    left: 6px; 
-    top: 2px; 
+.nextPageBtn:hover{
+    background-color: #ad4800;
 }

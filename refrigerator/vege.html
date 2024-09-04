@@ -5,15 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Refrigerator food ingredients survey</title>
     <link rel="stylesheet" href="vege.css"/>
-    <div><img src="../logo.png" width="111" height="72"></div>
 </head>
 <body>
-  <br><br>
-    <p id="header">냉장고에 어떤<br><span class="orange">식재료</span>가 있으신가요?</br></p>
-    <div class="container">
-      <input type="text" placeholder="식재료를 입력해주세요">
-      <button type="button" class="PlusBtn" onclick="">추가</button>
-    </div>
-    <button onClick="location.href='datePlan.html'" class="nextpageBtn">다음</button>
+    <div id="header"><img src="../logo.png" width="111" height="72"></div>
+    <form action="datePlan.html">
+        <div id="container">
+            <div class="title">냉장고에 어떤 <span style="color: #DE5D00">식재료</span>가 있으신가요?</div>
+            <div class="inputBox">
+              <input type="text" id="vegeInput" placeholder="식재료를 입력해주세요"/>
+              <button type="button" class="plusBtn" id="plusBtn" onclick="">추가</button>
+            </div>
+            <ul id = vegeList>
+                <!--js작성-->
+            </ul>
+        </div>
+        <div id="footer"><button type="submit" class="nextPageBtn">다음</button></div>
+    </form>
+
+    <script>
+        const vegeArray = ['당근', '오이'];
+        const plusBtn = document.getElementById('plusBtn');
+        const delBtn = document.getElementsByClassName('delBtn');
+        const vegeList = document.getElementById('vegeList')
+        const vegeInput = document.getElementById('vegeInput')
+
+        plusBtn.addEventListener("click", addVege);
+        vegeList.addEventListener("click", delVege);
+
+        renderVegeList()
+
+        function addVege(){
+            let vegeValue = vegeInput.value.trim();
+
+            if(vegeValue){
+                vegeArray.unshift(vegeValue);
+                renderVegeList();
+                vegeInput.value = '';
+            }
+        }
+
+        function delVege(event) {
+            if (event.target.classList.contains('delBtn')) {
+                let vegeToRemove = event.target.parentElement.textContent.slice(0, -1); // 'X' 제거
+                vegeArray.splice(vegeArray.indexOf(vegeToRemove), 1); // 해당 항목 제거
+                renderVegeList();
+            }
+        }
+
+        function renderVegeList(){
+            const vegeList = document.getElementById('vegeList');
+            vegeList.innerHTML = '';
+
+            vegeArray.forEach(function (vegeItem){
+                let li = document.createElement('li');
+                li.innerHTML = vegeItem + "<button type='button' class='delBtn'>X</button>";
+                vegeList.appendChild(li);
+            })
+            vegeInput.focus();
+        }
+    </script>
 </body>
 </html>
